@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Rights</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        /* background-image: url('first_bg.jpg'); */
+        background-color: white;
+        /* background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; */
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+      }
+      i {
+        padding: 4px;
+      }
+      .cross {
+        top: 45px;
+        left: 200px;
+        position: absolute;
+        cursor: pointer;
+      }
+      p {
+        /* margin-bottom: 20px;
+            margin-right: 200px; */
+        width: 100%;
+        max-width: 1000px;
+        font-size: 30px;
+        font-family: Open Sans;
+        font-weight: 400;
+        justify-content: center;
+        align-content: center;
+      }
+      .img {
+        margin-top: -11px;
+        height: 400px;
+        width: 600px;
+        /* max-width: 650px; */
+      }
+      .button button {
+        height: 50px;
+        width: 200px;
+        color: black;
+        font-weight: bold;
+        font-size: medium;
+        border-radius: 10px;
+        box-shadow: 0 10px 2px -2px gray;
+        cursor: pointer;
+        margin-top: 5px;
+        /* margin-right: 250px; */
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: -80px;
+      }
+      .button button:hover {
+        box-shadow: 0 10px 2px -2px rgb(88, 76, 76);
+        background-color: greenyellow;
+      }
+
+      @media (max-width: 768px) {
+        p {
+          font-size: 18px;
+          margin-right: 20px;
+        }
+        .cross {
+          left: 90%;
+        }
+        .img {
+          width: 90%;
+          height: auto;
+          margin-left: 21px;
+        }
+        .button button {
+          width: 100px;
+          margin-right: 20px;
+        }
+
+        .button button:hover {
+          box-shadow: 0 10px 2px -2px rgb(88, 76, 76);
+          background-color: greenyellow;
+        }
+
+        .theory-bottom,
+        .theory-top {
+          margin-left: 10px;
+        }
+      }
+      @media (max-width: 480px) {
+        h3 {
+          font-size: 16px;
+        }
+        .cross {
+          top: 10px;
+          left: 80%;
+        }
+        .button button {
+          width: 90%;
+          margin-top: 20px;
+          margin-right: 5%;
+        }
+        .button button:hover {
+          box-shadow: 0 10px 2px -2px rgb(88, 76, 76);
+          background-color: greenyellow;
+        }
+
+        .theory-bottom,
+        .theory-top {
+          margin-left: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="Learning.html" class="nav-link px-2 text-black">
+      <div class="icon"><i class="fa-solid fa-house"></i></div>
+    </a>
+    <div class="header">
+      <div class="cross">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="theory">
+      <p class="theory-top"></p>
+    </div>
+    <div class="image">
+      <img class="img" src="" alt="" />
+    </div>
+    <div class="theory">
+      <p class="theory-bottom"></p>
+    </div>
+
+    <div class="button">
+      <button class="click-me"></button>
+    </div>
+
+    <div class="audio">
+      <audio id="correctAudio" src="correct.mp3"></audio>
+    </div>
+  </body>
+  <script src="Jagruti_intro.js"></script>
+</html>

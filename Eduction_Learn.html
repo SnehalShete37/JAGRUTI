@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Rights</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        /* background-image: url('first_bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; */
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      i {
+        padding: 4px;
+      }
+      .cross {
+        top: 45px;
+        left: 200px;
+        position: absolute;
+        cursor: pointer;
+      }
+      h3 {
+        margin-bottom: 20px;
+        margin-right: 200px;
+        width: 100%;
+        max-width: 600px;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+      }
+      .img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 400px;
+        width: 600px;
+        max-width: 650px;
+      }
+      .button button {
+        height: 50px;
+        width: 250px;
+        color: black;
+        font-weight: bold;
+        font-size: medium;
+        border-radius: 10px;
+        box-shadow: 0 10px 2px -2px gray;
+        cursor: pointer;
+        margin-top: 5px;
+        margin-right: 250px;
+        justify-content: center;
+        align-items: center;
+      }
+      .button button:hover {
+        box-shadow: 0 10px 2px -2px rgb(88, 76, 76);
+        background-color: greenyellow;
+      }
+
+      .animated {
+        background-color: rgb(245, 75, 75);
+        border: 3px solid red;
+        animation: pulse 1s ease-in-out;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+      header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav-link {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        text-decoration: none; /* Remove default underline */
+        color: white; /* Set text color */
+      }
+
+      .nav-link .icon {
+        margin-right: 10px; /* Adjust margin between icon and text */ /* Set height of the icon */
+      }
+
+      .nav-item {
+        margin-right: 20px; /* Adjust margin between nav items */
+      }
+
+      /* Optional: To remove margin from the last item */
+      .nav-item:last-child {
+        margin-right: 10px;
+      }
+      .bg {
+        background-color: #41c9e2;
+      }
+
+      @media (max-width: 768px) {
+        h3 {
+          font-size: 18px;
+          margin-right: 20px;
+        }
+        .cross {
+          left: 90%;
+        }
+        .img {
+          width: 90%;
+          height: auto;
+          margin-left: 21px;
+        }
+        .button button {
+          width: 100px;
+          margin-right: 20px;
+        }
+
+        .button button:hover {
+          box-shadow: 0 10px 2px -2px rgb(88, 76, 76);
+          background-color: greenyellow;
+        }
+
+        .theory-bottom,
+        .theory-top {
+          margin-left: 10px;
+        }
+      }
+      @media (max-width: 480px) {
+        h3 {
+          font-size: 16px;
+        }
+        .cross {
+          top: 10px;
+          left: 80%;
+        }
+        .button button {
+          width: 90%;
+          margin-top: 20px;
+          margin-right: 5%;
+        }
+        .button button:hover {
+          box-shadow: 0 10px 2px -2px rgb(88, 76, 76);
+          background-color: greenyellow;
+        }
+
+        .theory-bottom,
+        .theory-top {
+          margin-left: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="Learning.html" class="nav-link px-2 text-black">
+      <div class="icon"><i class="fa-solid fa-house"></i></div>
+    </a>
+    <br />
+    <div class="header">
+      <div class="cross">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="theory">
+      <h3 class="theory-top"></h3>
+    </div>
+    <div class="image">
+      <img class="img" src="" alt="" />
+    </div>
+    <div class="theory">
+      <h3 class="theory-bottom"></h3>
+    </div>
+
+    <div class="buttons">
+      <div class="button">
+        <button class="click-me"></button>
+      </div>
+      <div class="button" style="display: none">
+        <button class="click-mee"></button>
+      </div>
+    </div>
+    <div class="audio">
+      <audio id="correctAudio" src="correct.mp3"></audio>
+    </div>
+  </body>
+  <script src="Eduction_learn.js"></script>
+</html>

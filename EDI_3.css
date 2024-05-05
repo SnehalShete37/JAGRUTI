@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7eedd;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.whole {
+  max-width: 100%;
+  padding: 5px;
+  /* background-color: rgb(220, 233, 233); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.two-img {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.first-img,
+.second-img {
+  height: 210px;
+  width: 210px;
+  background-color: #ace2e1;
+  border: 1px solid black;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20%;
+}
+
+.two-img img {
+  height: 150px;
+  width: 150px;
+  border-radius: 20%;
+  padding: 5px;
+  margin-left: 25px;
+  margin-top: 12px;
+}
+
+h2 {
+  margin-top: 2px;
+  text-align: center;
+  font-size: larger;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.situ {
+  font-size: 20px;
+  padding: 0.1px;
+}
+
+@media screen and (max-width: 768px) {
+  .whole {
+    margin: 0 10px;
+  }
+
+  .two-img {
+    gap: 1rem;
+  }
+
+  .first-img,
+  .second-img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .two-img img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .situ {
+    font-size: 13px;
+  }
+
+  h2 {
+    margin-top: 3px;
+    font-size: 16px;
+  }
+}
+
+.bg {
+  background-color: #41c9e2;
+}
+
+/* Apply hover effect to .first-img and .second-img */
+.first-img:hover,
+.second-img:hover {
+  background-color: #008dda; /* Change background color on hover */
+  transform: translateY(-5px); /* Move the element upwards slightly */
+  transition: background-color 0.3s, transform 0.3s; /* Add smooth transition */
+}

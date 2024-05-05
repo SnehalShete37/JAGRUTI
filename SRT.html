@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Rights</title>
+    <!-- <link rel="stylesheet" href="srt.css"> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: Open Sans;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      strong {
+        font-family: Open Sans;
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      img {
+        height: 250px;
+        width: 500px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+
+      #question-text {
+        /* font-weight: bold; */
+        font-family: Open Sans;
+        font-size: 20px;
+        font-family: Open Sans;
+        font-weight: 500;
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        padding: 10px 0;
+      }
+
+      .option {
+        border: 2px solid #0e0a0a;
+        padding: 13px;
+        width: 80%;
+        height: 50px;
+        margin: 10px 0;
+        cursor: pointer;
+        background-color: #eef6f7;
+        transition: background-color 0.3s, border-color 0.3s;
+        color: black;
+        font-weight: bold;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .option:hover {
+        background-color: #aff151;
+        box-shadow: 10px 10px 5px black;
+      }
+
+      .option.correct {
+        border-color: #38dd3d;
+        background-color: #e8f5e9;
+        box-shadow: 10px 10px 5px rgb(134, 243, 122);
+      }
+
+      .option.incorrect {
+        border-color: #f44336;
+        background-color: #ffebee;
+        animation: easeInOutEffect 0.5s ease-in-out;
+        box-shadow: 10px 10px 5px rgb(250, 129, 129);
+      }
+
+      @keyframes easeInOutEffect {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      #celebration-overlay {
+        position: fixed;
+        top: 260px;
+        left: 400px;
+        bottom: 50px;
+        width: 50%;
+        height: 45%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 1000;
+        /* margin-left: 250px; */
+      }
+
+      /* #celebration-video{
+    transform: rotate(-45deg);
+} */
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        height: 150px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .scorecard {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="EDI_3.html" class="nav-link px-2 text-black">
+      <div class="icon"><i class="fa-solid fa-house"></i></div>
+    </a>
+    <div class="container">
+      <strong class="title">Situation Reaction Test</strong>
+      <div id="question-container">
+        <img id="question-image" src="" alt="Question Image" />
+        <div id="question-text"></div>
+      </div>
+
+      <!-- <div id="celebration-overlay" style="display: none;">
+            <img id="celebration-video" src="cele.gif" alt="Celebration" style="width: 100%; height: 100%; object-fit: cover;">
+        </div> -->
+
+      <div class="audio">
+        <audio id="correctAudio" src="correct.mp3"></audio>
+        <audio id="incorrectAudio" src="wrong.mp3"></audio>
+      </div>
+
+      <div id="options-container" class="options"></div>
+      <div id="scorecard" class="scorecard"></div>
+      <div id="answers" class="scorecard"></div>
+    </div>
+    <script src="SRT.js"></script>
+  </body>
+</html>

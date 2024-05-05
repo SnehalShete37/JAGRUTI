@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Rights</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      body {
+        background-image: url("feature_21.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Ensure the background covers the full viewport height */
+      }
+      .scorecard {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+        text-align: center;
+      }
+      header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav-link {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        text-decoration: none; /* Remove default underline */
+        color: white; /* Set text color */
+      }
+
+      .nav-link .icon {
+        margin-right: 10px; /* Adjust margin between icon and text */ /* Set height of the icon */
+      }
+
+      .nav-item {
+        margin-right: 20px; /* Adjust margin between nav items */
+      }
+
+      /* Optional: To remove margin from the last item */
+      .nav-item:last-child {
+        margin-right: 10px;
+      }
+      .bg {
+        background-color: #41c9e2;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="p-3 bg text-white">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <svg
+              class="bi me-2"
+              width="40"
+              height="32"
+              role="img"
+              aria-label="Bootstrap"
+            >
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="EDI_3.html" class="nav-link px-2 text-black">
+                <div class="icon"><i class="fa-solid fa-house"></i></div>
+              </a>
+            </li>
+            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            <li>
+              <a href="Help.html" class="nav-link px-2 text-white">Help</a>
+            </li>
+          </ul>
+
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">
+              Log Out
+            </button>
+            <button type="button" class="btn btn-warning">Sign-up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <br /><br />
+    <div id="scorecard" class="scorecard"></div>
+    <div id="answers" class="scorecard"></div>
+
+    <script>
+      window.onload = function () {
+        const score = localStorage.getItem("score");
+        const userResponses = JSON.parse(localStorage.getItem("userResponses"));
+        const scorecard = document.getElementById("scorecard");
+        const answers = document.getElementById("answers");
+
+        scorecard.innerHTML = `<h2>Score: ${score}</h2>`;
+
+        let answersHtml = "<h2>Answers</h2>";
+        userResponses.forEach((response, index) => {
+          const questionNumber = index + 1;
+          const isCorrect = response.userAnswer === response.correctAnswer;
+          const correctness = isCorrect ? "Correct" : "Incorrect";
+          const color = isCorrect ? "green" : "red";
+          answersHtml += `<p>Question ${questionNumber}: ${correctness} - <span style="color: ${color};">Your answer: ${response.userAnswer}, Correct answer: ${response.correctAnswer}</span></p>`;
+        });
+        answers.innerHTML = answersHtml;
+      };
+    </script>
+  </body>
+</html>

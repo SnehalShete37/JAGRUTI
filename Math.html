@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Game</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="Math.css" />
+    <style>
+      .nav-link {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        text-decoration: none; /* Remove default underline */
+        color: white; /* Set text color */
+      }
+
+      .nav-link .icon {
+        margin-right: 10px; /* Adjust margin between icon and text */ /* Set height of the icon */
+      }
+
+      .nav-item {
+        margin-right: 20px; /* Adjust margin between nav items */
+      }
+
+      /* Optional: To remove margin from the last item */
+      .nav-item:last-child {
+        margin-right: 10px;
+      }
+      .icon {
+        margin-top: -400px;
+
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Fill In The Blank With Correct Number Or Operator</h3>
+      <div id="question"></div>
+      <button id="submit-btn" class="btn btn-primary">Submit</button>
+      <p id="error-msg" class="text-danger">Some Demo Error Message</p>
+    </div>
+
+    
+    <div class="controls-container">
+      <p id="result"></p>
+      <a href="EDI_4.html" class="nav-link px-2 text-black">
+        <div class="icon"><i class="fa-solid fa-house"></i></div>
+      </a>
+      <button id="start-btn" class="btn btn-success">Start Game</button>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your custom script -->
+    <script src="Math.js"></script>
+  </body>
+</html>

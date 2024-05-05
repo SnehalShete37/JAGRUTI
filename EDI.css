@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 20x;
+  border: px solid #000;
+  height: 50%;
+  background: linear-gradient(to right, #7effe5, #f7f8f9);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-image: url("bg_2_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: " Dancing Script", cursive;
+  color: #211c6a;
+  font-weight: 1000;
+}
+
+p {
+  font-family: "Pacifico", cursive;
+  color: #1e0342;
+}
+
+.d-block mx-lg-auto img-fluid {
+  height: 750px;
+  width: 800px;
+  margin-top: 50px;
+  margin-left: 550px;
+  justify-content: center;
+}
+
+.btn-group {
+  margin-top: 25px;
+  margin-left: 800px;
+  height: 20px;
+  width: 200px;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: inset;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.d-block mx-lg-auto img-fluid {
+  position: relative;
+}
+
+.page-wrapper {
+  margin: 0px auto;
+  padding: 20px;
+  border: 0px solid #000;
+  position: relative;
+}
+
+.d-grid gap-2 col-6 mx-auto {
+  background-color: orange;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.d-grid gap-2 col-6 mx-auto:hover {
+  background-color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.d-grid gap-2 col-6 mx-auto.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.soham {
+  width: 5800px;
+  height: 200px;
+  background-color: pink;
+}
+
+.btn:hover {
+  background-color: rgb(41, 165, 227);
+}
+
+.btn {
+  color: #000;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: open sans;
+  background-color: rgb(106, 255, 47);
+  border-color: black;
+  width: 350px;
+  height: px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom {
+  background-color: #36e81b;
+  color: #000;
+  border-color: px solid #000;
+  width: 500px;
+  height: 350px;
+  font-size: 50px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+
+/* Add a hover effect to the image */
+.hoverable {
+  transition: transform 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.hoverable:hover {
+  transform: scale(
+    1.1
+  ); /* Scale the image to 1.1 times its original size on hover */
+}
